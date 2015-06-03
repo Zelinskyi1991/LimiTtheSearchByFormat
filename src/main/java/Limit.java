@@ -20,6 +20,7 @@ public class Limit {
     String material="";
     String format = " ";
     String type = "";
+    
 
     private WebDriver driver ;
 
@@ -31,26 +32,26 @@ public class Limit {
         return driver;
     }
 
-    @Given("User try input som $value in $searchBar")
+    @Given("User imput $value in anvanced $searchBar")
     public void Get_value(WebDriver driver,String value,String searchBar)
     {
         driver.findElement(By.id(searchBar)).sendKeys(value);
 
     }
-    @When("User can correct $value$ and bush the button $btnG")
+    @When("User can change $value$ and push the button $btnG")
     public void Push_button(WebDriver driver,String btName, String value, String searchBar)
     {
         driver.findElement(By.id(searchBar)).sendKeys(value);
         driver.findElement(By.name(btName)).click();
     }
 
-    @Alias("User can user format & type in search")
+   /* @Alias("User can user format & type in search")
     public void Format_search (WebDriver driver, String format, String type, String searchBar, String value, String btName ) {
         driver.findElement(By.id(format)).click();
         driver.findElement(By.id(type)).click();
         driver.findElement(By.id(searchBar)).sendKeys(value);
         driver.findElement(By.name(btName)).click();
-    }
+    }*/
 
 
 
